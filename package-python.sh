@@ -16,7 +16,8 @@ cp quickfix/src/C++/*.cpp quickfix-python/C++
 cp -R quickfix/src/C++/double-conversion quickfix-python/C++
 cp quickfix/src/python3/QuickfixPython.cpp quickfix-python/C++
 cp quickfix/src/python3/QuickfixPython.h quickfix-python/C++
-cp quickfix/src/swig/*.h quickfix-python/C++
+cp quickfix/src/swig/SSLStubs.h quickfix-python/C++
+cp quickfix/src/swig/PostgreSQLStubs.h quickfix-python/C++
 
 cp quickfix/spec/FIX*.xml quickfix-python/spec
 
