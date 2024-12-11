@@ -20,5 +20,9 @@ rm -f quickfix-$QF_VERSION.tar.gz
 tar czvf quickfix-$QF_VERSION.tar.gz quickfix
 
 pushd quickfix
-cp README.md README && ./bootstrap && ./configure --with-postgresql --with-python3 && make && make check
+cp README.md README
+./bootstrap
+./configure --with-openssl --with-postgresql --with-python3
+make
+make install
 popd
