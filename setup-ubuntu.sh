@@ -1,4 +1,4 @@
-apt-get -y install git doxygen graphviz libtool g++ ruby ruby-dev python python-dev libpq-dev
+apt-get -y install git doxygen graphviz libtool g++ ruby ruby-dev python python-dev libpq-dev libssl-dev
 
 # Autoconf precisa ser a versão 2.71
 wget --no-check-certificate https://ftp.gnu.org/gnu/autoconf/autoconf-2.71.tar.xz
