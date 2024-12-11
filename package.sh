@@ -1,3 +1,5 @@
+#!/bin/bash
+
 QF_VERSION='1.15.1.20240724'
 
 rm -rf quickfix
