@@ -2,11 +2,8 @@ QF_VERSION='1.15.1.20240724'
 
 rm -rf quickfix
 
-git clone --depth 1 https://github.com/quickfix/quickfix.git
-cd quickfix
-git reset --hard 94625580bfd50c1ebba3f704a88c9e3c392f9fb1
-rm -rf ./.git
-cd ..
+git clone --depth 1 https://github.com/Gaizgrol/quickfix.git
+rm -rf quickfix/.git
 
 pushd quickfix/doc
 ./document.sh
