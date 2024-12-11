@@ -14,8 +14,6 @@ popd
 
 pushd quickfix
 ../git2cl > ChangeLog
-cp README.md README
-./bootstrap
 popd
 
 rm -f quickfix-$QF_VERSION.tar.gz
@@ -23,5 +21,5 @@ rm -f quickfix-$QF_VERSION.tar.gz
 tar czvf quickfix-$QF_VERSION.tar.gz quickfix
 
 pushd quickfix
-./configure --with-postgresql --with-python3 && make && make check
+cp README.md README && ./bootstrap && ./configure --with-postgresql --with-python3 && make && make check
 popd
