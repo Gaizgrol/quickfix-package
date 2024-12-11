@@ -1,9 +1,12 @@
-QF_VERSION=$1
+QF_VERSION='1.15.1.20240724'
 
 rm -rf quickfix
 
 git clone --depth 1 https://github.com/quickfix/quickfix.git
-rm -rf quickfix/.git
+cd quickfix
+git reset --hard 94625580bfd50c1ebba3f704a88c9e3c392f9fb1
+rm -rf ./.git
+cd ..
 
 pushd quickfix/doc
 ./document.sh
@@ -11,6 +14,7 @@ popd
 
 pushd quickfix
 ../git2cl > ChangeLog
+cp README.md README
 ./bootstrap
 popd
 
@@ -19,5 +23,5 @@ rm -f quickfix-$QF_VERSION.tar.gz
 tar czvf quickfix-$QF_VERSION.tar.gz quickfix
 
 pushd quickfix
-cp README.md README && ./bootstrap && ./configure --with-postgresql --with-python3 && make && make check
+./configure --with-postgresql --with-python3 && make && make check
 popd
